@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+.game-container {
+    text-align: center;
+}
+
+.holes {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.hole {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #8f8f8f;
+    position: relative;
+    overflow: hidden;
+}
+
+.head {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    bottom: -80px;
+    left: 10px;
+    transition: bottom 0.5s ease;
+}
+
+.head.boy {
+    background-image: url('head-normal.png'); /* صورة الرأس العادي */
+}
+
+.head.girl {
+    background-image: url('girl-normal.png'); /* صورة الرأس العادي */
+}
+
+.head.hit {
+    background-image: url('head-hit.png'); /* صورة الرأس بعد التورم */
+}
+
+.score {
+    font-size: 20px;
+    margin: 10px;
+    color: #333;
+}
+
+.restart-button {
+    display: none;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.restart-button:hover {
+    background-color: #ff4a3f;
+}
+
+.win-message {
+    display: none;
+    font-size: 24px;
+    color: #ffcc00;
+    margin-top: 20px;
+    font-weight: bold;
+}
